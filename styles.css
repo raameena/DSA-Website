@@ -308,6 +308,80 @@ body::before {
     box-shadow: 0 0 15px rgba(168, 85, 247, 0.7);
 }
 
+/* Section-specific active navigation colors */
+.nav-link.active[href="#home"] {
+    color: #a855f7; /* Purple */
+}
+
+.nav-link.active[href="#home"]::after {
+    background: linear-gradient(135deg, #a855f7 0%, #1e3a8a 100%);
+    box-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
+}
+
+.nav-link.active[href="#about"] {
+    color: #8b5cf6; /* More purple than blue */
+}
+
+.nav-link.active[href="#about"]::after {
+    background: linear-gradient(135deg, #a855f7 0%, #1e3a8a 100%);
+    box-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
+}
+
+.nav-link.active[href="#board"] {
+    color: #6366f1; /* More blue than purple */
+}
+
+.nav-link.active[href="#board"]::after {
+    background: linear-gradient(135deg, #a855f7 0%, #1e3a8a 100%);
+    box-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
+}
+
+.nav-link.active[href="#events"] {
+    color: #3D4DDF; /* Custom Dark Blue */
+}
+
+.nav-link.active[href="#events"]::after {
+    background: linear-gradient(135deg, #a855f7 0%, #1e3a8a 100%);
+    box-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
+}
+
+/* Hover effects for section-specific active states */
+.nav-link.active[href="#home"]:hover {
+    color: #9333ea;
+}
+
+.nav-link.active[href="#home"]:hover::after {
+    background: linear-gradient(135deg, #a855f7 0%, #1e3a8a 100%);
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.7);
+}
+
+.nav-link.active[href="#about"]:hover {
+    color: #7c3aed;
+}
+
+.nav-link.active[href="#about"]:hover::after {
+    background: linear-gradient(135deg, #a855f7 0%, #1e3a8a 100%);
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.7);
+}
+
+.nav-link.active[href="#board"]:hover {
+    color: #4f46e5;
+}
+
+.nav-link.active[href="#board"]:hover::after {
+    background: linear-gradient(135deg, #a855f7 0%, #1e3a8a 100%);
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.7);
+}
+
+.nav-link.active[href="#events"]:hover {
+    color: #2e3dbf;
+}
+
+.nav-link.active[href="#events"]:hover::after {
+    background: linear-gradient(135deg, #a855f7 0%, #1e3a8a 100%);
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.7);
+}
+
 .hamburger {
     display: none;
     flex-direction: column;
@@ -368,6 +442,16 @@ body::before {
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 1s ease-out 0.3s forwards;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.hero-badge:hover {
+    background: rgba(226, 232, 240, 0.2);
+    border-color: rgba(226, 232, 240, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(226, 232, 240, 0.2);
+    color: var(--text-light);
 }
 
 .hero-badge i {
@@ -523,13 +607,15 @@ body::before {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, rgba(168, 85, 247, 0.2) 0%, rgba(30, 58, 138, 0.2) 100%);
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.15) 0%, rgba(30, 58, 138, 0.15) 100%);
     color: var(--text-light);
-    box-shadow: 0 5px 15px rgba(168, 85, 247, 0.3);
-    backdrop-filter: blur(10px);
-    border: 1px solid transparent;
+    box-shadow: 0 8px 32px rgba(168, 85, 247, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 15px rgba(168, 85, 247, 0.1);
+    backdrop-filter: blur(20px);
+    border: none;
+    border-radius: 10px;
     background-clip: padding-box;
     position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .btn-primary::before {
@@ -539,7 +625,7 @@ body::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(168, 85, 247, 0.4), rgba(59, 130, 246, 0.4));
+    background: linear-gradient(135deg, rgba(147, 51, 234, 0.6) 0%, rgba(59, 130, 246, 0.6) 100%);
     border-radius: 10px;
     z-index: -1;
     margin: -1px;
@@ -547,9 +633,12 @@ body::before {
 
 .btn-primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 15px 35px rgba(168, 85, 247, 0.4);
-    background: linear-gradient(135deg, rgba(168, 85, 247, 0.3) 0%, rgba(30, 58, 138, 0.3) 100%);
+    box-shadow: 0 15px 35px rgba(168, 85, 247, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 0 20px rgba(168, 85, 247, 0.15);
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.25) 0%, rgba(30, 58, 138, 0.25) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
+
+
 
 .btn-primary:hover::before {
     background: linear-gradient(135deg, rgba(168, 85, 247, 0.6), rgba(59, 130, 246, 0.6));
@@ -1550,6 +1639,140 @@ section {
 .join-links .btn:hover {
     transform: translateY(-5px) scale(1.05);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Enhanced glowing effect for all join-links buttons - more specific */
+.join-links .btn.btn-primary,
+.join-links .btn.btn-whatsapp,
+.join-links .btn.btn-linkedin {
+    position: relative;
+    overflow: hidden;
+}
+
+.join-links .btn.btn-primary::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(168, 85, 247, 0.4) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.join-links .btn.btn-whatsapp::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(37, 211, 102, 0.4) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.join-links .btn.btn-linkedin::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 119, 181, 0.4) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.join-links .btn.btn-primary:hover::after {
+    opacity: 1;
+    animation: glowPulse 2s ease-in-out infinite;
+}
+
+.join-links .btn.btn-whatsapp:hover::after {
+    opacity: 1;
+    animation: glowPulseWhatsApp 2s ease-in-out infinite;
+}
+
+.join-links .btn.btn-linkedin:hover::after {
+    opacity: 1;
+    animation: glowPulseLinkedIn 2s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.4;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+@keyframes glowPulseWhatsApp {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.4;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+@keyframes glowPulseLinkedIn {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.4;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+.join-links .btn.btn-primary:hover {
+    transform: translateY(-5px) scale(1.05) !important;
+    box-shadow: 
+        0 15px 25px rgba(168, 85, 247, 0.2),
+        0 0 15px rgba(168, 85, 247, 0.15),
+        0 0 25px rgba(168, 85, 247, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.3) 0%, rgba(30, 58, 138, 0.3) 100%) !important;
+    border: 0.5px solid rgba(168, 85, 247, 0.4) !important;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3) !important;
+}
+
+.join-links .btn.btn-whatsapp:hover {
+    transform: translateY(-5px) scale(1.05) !important;
+    box-shadow: 
+        0 15px 25px rgba(37, 211, 102, 0.2),
+        0 0 15px rgba(37, 211, 102, 0.15),
+        0 0 25px rgba(37, 211, 102, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+    background: linear-gradient(135deg, rgba(37, 211, 102, 0.3) 0%, rgba(18, 140, 126, 0.3) 100%) !important;
+    border: 0.5px solid rgba(37, 211, 102, 0.4) !important;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3) !important;
+}
+
+.join-links .btn.btn-linkedin:hover {
+    transform: translateY(-5px) scale(1.05) !important;
+    box-shadow: 
+        0 15px 25px rgba(0, 119, 181, 0.25),
+        0 0 15px rgba(0, 119, 181, 0.2),
+        0 0 25px rgba(0, 119, 181, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+    background: linear-gradient(135deg, rgba(0, 119, 181, 0.35) 0%, rgba(0, 88, 133, 0.35) 100%) !important;
+    border: 0.5px solid rgba(0, 119, 181, 0.5) !important;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3) !important;
 }
 
 /* LinkedIn Button Styling */
