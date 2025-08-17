@@ -637,18 +637,45 @@ function initSocialMediaPopups() {
 
 // Social Media Popup Function
 function showSocialMediaPopup(platform) {
-    // Create small side popup
+    // Get the clicked social icon element
+    const clickedElement = document.getElementById(`footer-${platform.toLowerCase()}`);
+    const rect = clickedElement.getBoundingClientRect();
+    
+    // Calculate popup dimensions and available space
+    const popupHeight = 80; // Approximate height of popup (padding + content)
+    const popupWidth = 120;
+    const windowHeight = window.innerHeight;
+    const windowWidth = window.innerWidth;
+    
+    // Check if popup would be cut off at the top or bottom
+    const wouldBeCutOffTop = (rect.top - 10) < 0;
+    const wouldBeCutOffBottom = (rect.top - 10 + popupHeight) > windowHeight;
+    
+    // Determine popup position
+    let popupTop, popupRight;
+    
+    if (wouldBeCutOffTop || wouldBeCutOffBottom) {
+        // Position at bottom right if popup would be cut off
+        popupTop = windowHeight - popupHeight - 20;
+        popupRight = 20;
+    } else {
+        // Position adjacent to the clicked icon
+        popupTop = rect.top - 10;
+        popupRight = 20;
+    }
+    
+    // Create small side popup positioned relative to the clicked icon
     const popup = document.createElement('div');
     popup.className = 'social-media-popup';
     popup.style.cssText = `
         position: fixed;
-        bottom: 20px;
-        right: 20px;
+        top: ${popupTop}px;
+        right: ${popupRight}px;
         background: linear-gradient(135deg, #0f1419 0%, #1a1f2e 100%);
         border: 2px solid #ffd700;
         border-radius: 8px;
         padding: 1rem;
-        width: 120px;
+        width: ${popupWidth}px;
         text-align: center;
         z-index: 99999;
         box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3);
