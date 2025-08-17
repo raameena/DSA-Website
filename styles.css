@@ -73,7 +73,7 @@ body::before {
 
 .raindrop {
     position: absolute;
-    color: rgba(226, 232, 240, 0.20);
+    color: rgba(226, 232, 240, 0.35);
     font-family: 'Courier New', monospace;
     font-weight: bold;
     font-size: 1.2rem;
