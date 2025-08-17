@@ -1145,15 +1145,6 @@ section {
     }
 
     /* Events & Join Section - Mobile */
-    .events-join-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .events-card, .join-card {
-        padding: 2rem 1.5rem;
-    }
-
     .events-card h3, .join-card h3 {
         font-size: 2rem;
     }
@@ -1307,6 +1298,45 @@ section {
     gap: 3rem;
     position: relative;
     z-index: 1;
+}
+
+/* Responsive breakpoint for when cards should stack */
+@media (max-width: 1024px) {
+    .events-join-content {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    
+    /* Ensure proper order: Connect With Us first, then Upcoming Events */
+    .events-join-content .join-card {
+        order: 1;
+    }
+    
+    .events-join-content .events-card {
+        order: 2;
+    }
+}
+
+/* Tablet breakpoint for better spacing */
+@media (max-width: 768px) {
+    .events-join-content {
+        gap: 2rem;
+    }
+    
+    .events-card, .join-card {
+        padding: 2.5rem 2rem;
+    }
+}
+
+/* Small mobile breakpoint for compact layout */
+@media (max-width: 480px) {
+    .events-join-content {
+        gap: 1.5rem;
+    }
+    
+    .events-card, .join-card {
+        padding: 2rem 1.5rem;
+    }
 }
 
 .events-card, .join-card {

@@ -17,12 +17,57 @@ document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        const href = this.getAttribute('href');
+        
+        // Special handling for "Upcoming Events" button
+        if (href === '#events' && this.textContent.trim().includes('Upcoming Events')) {
+            handleUpcomingEventsClick();
+            return;
+        }
+        
+        const target = document.querySelector(href);
         if (target) {
             target.scrollIntoView({
                 behavior: 'smooth',
                 block: 'start'
             });
+        }
+    });
+});
+
+// Handle "Upcoming Events" button click based on screen size
+function handleUpcomingEventsClick() {
+    const isMobile = window.innerWidth <= 1024; // Same breakpoint as CSS
+    
+    if (isMobile) {
+        // On mobile/condensed view, scroll to the "Coming Soon" container
+        const comingSoonTarget = document.querySelector('#coming-soon');
+        if (comingSoonTarget) {
+            comingSoonTarget.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    } else {
+        // On desktop, scroll to the entire events section
+        const eventsTarget = document.querySelector('#events');
+        if (eventsTarget) {
+            eventsTarget.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    }
+}
+
+// Update button behavior on window resize
+window.addEventListener('resize', () => {
+    // Re-initialize the "Upcoming Events" button behavior
+    const upcomingEventsButtons = document.querySelectorAll('a[href="#events"]');
+    upcomingEventsButtons.forEach(button => {
+        if (button.textContent.trim().includes('Upcoming Events')) {
+            // The click handler will automatically use the current window size
+            // No need to re-add event listeners since they're already attached
         }
     });
 });
