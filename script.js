@@ -479,8 +479,7 @@ function showLinkedInPopup() {
             <i class="fab fa-linkedin" style="font-size: 3rem; color: #0077b5; margin-bottom: 1rem; display: block;"></i>
             <h3 style="color: #e2e8f0; font-size: 1.5rem; margin-bottom: 1rem;">LinkedIn Coming Soon!</h3>
             <p style="color: #a0aec0; line-height: 1.6; margin-bottom: 1.5rem;">
-                We're working on setting up our LinkedIn page to connect with the broader data science community. 
-                Stay tuned for updates and professional networking opportunities!
+                Join our Whatsapp Group in the meantime to stay connected and up to date with all of the events we have planned!
             </p>
         </div>
         <button class="popup-close-btn" style="
