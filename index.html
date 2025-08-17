@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Science Association - University of Michigan</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-brain"></i>
+                <span>DSA</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#board" class="nav-link">Board</a></li>
+                <li><a href="#events" class="nav-link">Community</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Rain Effect - Full Page -->
+    <div class="rain-container" id="rain-container"></div>
+    
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <!-- Background Line Graph -->
+        <div class="background-line-graph">
+            <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <path class="graph-line" d="M0,100 L10,95 L20,80 L30,85 L40,70 L50,75 L60,55 L70,60 L80,20 L90,25 L100,0" 
+                      stroke="rgba(100, 116, 139, 0.8)" 
+                      stroke-width="0.5" 
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"/>
+            </svg>
+        </div>
+        
+
+        
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-university"></i>
+                <span>University of Michigan - Dearborn</span>
+            </div>
+            
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="title-main">Data Science</span>
+                    <span class="title-accent">Association</span>
+                </h1>
+                <p class="hero-subtitle">Open to All Majors</p>
+                <p class="hero-description">Join a community of passionate data scientists, researchers, and innovators at the University of Michigan. Explore machine learning, statistical analysis, and cutting-edge data technologies.</p>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">30+</span>
+                        <span class="stat-label">Active Members</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Hands-on Learning</span>
+                    </div>
+                </div>
+                
+                <div class="hero-buttons">
+                    <a href="#events" class="btn btn-purple">
+                        <i class="fas fa-calendar-alt"></i>
+                        Upcoming Events
+                    </a>
+                    <a href="#events" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i>
+                        Join Our Community
+                    </a>
+                    <a href="#about" class="btn btn-blue">
+                        <i class="fas fa-info-circle"></i>
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Data Visualization Background -->
+        <div class="data-viz-background">
+            <div class="scatter-plot">
+                <div class="point" style="left: 20%; top: 30%"></div>
+                <div class="point" style="left: 35%; top: 45%"></div>
+                <div class="point" style="left: 50%; top: 25%"></div>
+                <div class="point" style="left: 65%; top: 60%"></div>
+                <div class="point" style="left: 80%; top: 35%"></div>
+                <div class="point" style="left: 15%; top: 55%"></div>
+                <div class="point" style="left: 25%; top: 15%"></div>
+                <div class="point" style="left: 40%; top: 70%"></div>
+                <div class="point" style="left: 55%; top: 10%"></div>
+                <div class="point" style="left: 70%; top: 80%"></div>
+            </div>
+            <div class="bar-chart">
+                <div class="bar" style="height: 60%"></div>
+                <div class="bar" style="height: 80%"></div>
+                <div class="bar" style="height: 45%"></div>
+                <div class="bar" style="height: 90%"></div>
+                <div class="bar" style="height: 70%"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            <div class="about-content">
+                <div class="mission-card">
+                    <div class="card-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Our Mission</h3>
+                    <p>The Data Science Association is devoted to applying data science across the STEM field, and widening the variety of people in the data science sector.</p>
+                </div>
+                <div class="achievements-card">
+                    <div class="card-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>What We've Accomplished</h3>
+                    <ul>
+                        <li>Launched independent student summer research</li>
+                        <li>Attracted over 30 members to our campus community</li>
+                        <li>Hosted lectures on SQL and Python by Masters students and professors</li>
+                        <li>Built a strong foundation for future growth</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Board Members Section -->
+    <section id="board" class="board">
+        <div class="container">
+            <h2 class="section-title">Our Leadership</h2>
+            <div class="board-grid">
+                <div class="board-member">
+                    <div class="member-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Damien Baldwin</h3>
+                    <p class="position">President</p>
+                    <p class="email">damienb@umich.edu</p>
+                    <a href="#" class="linkedin-btn" data-linkedin="damien-baldwin">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+                <div class="board-member">
+                    <div class="member-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Brooke Heebner</h3>
+                    <p class="position">Vice President</p>
+                    <p class="email">bheebner@umich.edu</p>
+                    <a href="#" class="linkedin-btn" data-linkedin="brooke-heebner">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+                <div class="board-member">
+                    <div class="member-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Melia Conners</h3>
+                    <p class="position">Secretary & Marketing</p>
+                    <p class="email">mconners@umich.edu</p>
+                    <a href="#" class="linkedin-btn" data-linkedin="melia-conners">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+                <div class="board-member">
+                    <div class="member-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Traven Yarbro</h3>
+                    <p class="position">Treasurer</p>
+                    <p class="email">tyarbro@umich.edu</p>
+                    <a href="#" class="linkedin-btn" data-linkedin="traven-yarbro">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+                <div class="board-member">
+                    <div class="member-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Raameen Ahmed</h3>
+                    <p class="position">Advisor</p>
+                    <p class="email">raameena@umich.edu</p>
+                    <a href="#" class="linkedin-btn" data-linkedin="raameen-ahmed">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+                <div class="board-member">
+                    <div class="member-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Anand Jha</h3>
+                    <p class="position">Advisor</p>
+                    <p class="email">anandjha@umich.edu</p>
+                    <a href="#" class="linkedin-btn" data-linkedin="anand-jha">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+                <div class="board-member">
+                    <div class="member-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Tanya Danial</h3>
+                    <p class="position">Marketing</p>
+                    <p class="email">tdanial@umich.edu</p>
+                    <a href="#" class="linkedin-btn" data-linkedin="tanya-danial">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+                <div class="board-member">
+                    <div class="member-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Alejandro Albarracin Gonzalez</h3>
+                    <p class="position">Project Coordinator</p>
+                    <p class="email">aleag@umich.edu</p>
+                    <a href="#" class="linkedin-btn" data-linkedin="alejandro-albarracin-gonzalez">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+                <div class="board-member">
+                    <div class="member-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Keshav Pokhrel</h3>
+                    <p class="position">Faculty Advisor</p>
+                    <p class="email">kpokhrel@umich.edu</p>
+                    <a href="#" class="linkedin-btn" data-linkedin="keshav-pokhrel">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events & Join Section -->
+    <section id="events" class="events-join">
+        <div class="container">
+            <h2 class="section-title">Events & Community</h2>
+            <div class="events-join-content">
+                <!-- Join Card -->
+                <div class="join-card">
+                    <div class="join-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Connect With Us</h3>
+                    <p>Join our vibrant community of data science enthusiasts! Connect with fellow students, participate in workshops, and stay updated with the latest in data science.</p>
+                    
+                    <div class="join-links">
+                        <a href="https://umdearborn.campuslabs.com/engage/organization/dsa" class="btn btn-primary" target="_blank">
+                            <i class="fas fa-external-link-alt"></i>
+                            Visit our Victor's Link
+                        </a>
+                        <a href="https://chat.whatsapp.com/C5VADKtbNaCAL9cF0aniq7?mode=ac_t" class="btn btn-whatsapp" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                            Join WhatsApp Group
+                        </a>
+                        <a href="#" class="btn btn-linkedin" id="linkedin-btn">
+                            <i class="fab fa-linkedin"></i>
+                            Follow us on LinkedIn
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Events Card -->
+                <div class="events-card">
+                    <div class="events-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Coming Soon</h3>
+                    <p>We're planning exciting events, workshops, and meetups for our community! Stay tuned for announcements about upcoming data science events, guest speakers, and hands-on workshops.</p>
+                    
+                    <div class="events-features">
+                        <div class="feature-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Workshops & Seminars</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-users"></i>
+                            <span>Networking Events</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <span>Guest Speakers</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-laptop-code"></i>
+                            <span>Hands-on Projects</span>
+                        </div>
+                    </div>
+                    
+                    <div class="events-notification">
+                        <i class="fas fa-bell"></i>
+                        <span>Join our community to be notified when events are announced!</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Data Science Association</h3>
+                    <p>Empowering the Future of Data</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Email: damienb@umich.edu</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" id="footer-linkedin"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" id="footer-twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" id="footer-instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <p class="social-notice">Social media links coming soon!</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Data Science Association. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
