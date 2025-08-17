@@ -96,11 +96,11 @@ window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     
     if (scrolled > 100) {
-        navbar.style.background = 'rgba(10, 14, 23, 0.98)';
+        navbar.style.background = 'linear-gradient(135deg, rgba(10, 14, 23, 0.98) 0%, rgba(26, 31, 46, 0.98) 100%)';
         navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.3)';
     } else {
-        navbar.style.background = 'rgba(10, 14, 23, 0.95)';
-        navbar.style.boxShadow = 'none';
+        navbar.style.background = 'linear-gradient(135deg, rgba(15, 20, 25, 0.95) 0%, rgba(26, 31, 46, 0.95) 100%)';
+        navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
     }
 });
 
